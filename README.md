@@ -1,46 +1,57 @@
-# Tiến Dương
+<div align="center">
 
-**Trợ lý lái xe tiếng Việt chạy offline**: 5 dự án AI (RAG, computer vision, Transformer tự viết, fine-tune LLM, hệ thống ghép)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=190&section=header&text=Ti%E1%BA%BFn%20D%C6%B0%C6%A1ng&fontSize=46&fontColor=FFFFFF&animation=fadeIn&desc=Software%20%26%20AI%20%C2%B7%20Sinh%20vi%C3%AAn%20n%C4%83m%204&descSize=18&descAlignY=68" width="100%"/>
 
-Hugging Face: [hgdkakhs](https://huggingface.co/hgdkakhs)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=36BCF7&center=true&vCenter=true&width=640&lines=RAG+%C2%B7+Computer+Vision+%C2%B7+LLM+fine-tuning;AI+ch%E1%BA%A1y+offline+tr%C3%AAn+laptop+kh%C3%B4ng+GPU;2+app+doanh+nghi%E1%BB%87p+tr%C3%AAn+Google+Play" alt="typing"/>
 
-5 repo, 4 thành phần + 1 hệ thống ghép lại, chạy trên laptop không GPU (Ryzen 5 5625U). Số liệu dưới đây là số đã
-chạy thật (04/10/2026), kể cả những chỗ chưa đạt.
+<a href="https://huggingface.co/hgdkakhs"><img src="https://img.shields.io/badge/Hugging%20Face-hgdkakhs-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white"/></a>
+<a href="https://duongcodeai.github.io/vi-diacritics-transformer/"><img src="https://img.shields.io/badge/Live%20demo-Th%C3%AAm%20d%E1%BA%A5u%20ti%E1%BA%BFng%20Vi%E1%BB%87t-2ECC71?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
 
-**1. [vn-traffic-law-rag](https://github.com/DuongCodeAI/vn-traffic-law-rag): RAG tra luật giao thông**
-Hỏi đáp NĐ 168/2024 + Luật 36/2024, trích dẫn tới Điểm/Khoản/Điều. BM25 + vector + RRF + rerank ONNX trên CPU.
-Bộ eval tự làm 61 câu: recall@5 **0.86** (BM25 đơn thuần 0.74); riêng bảng từ đời thường → ngôn ngữ luật nâng
-0.64 → 0.86, mở rộng tham chiếu nâng tỉ lệ "lấy đủ mức phạt + trừ điểm" 0.36 → 0.81. Đo ra embedding e5-small thua BM25 trên văn bản luật, và thêm dấu trước khi tìm
-làm recall@5 tụt (0.83 → 0.72), nên cả hai không bật mặc định.
+</div>
 
-**2. [vn-dashcam-vision](https://github.com/DuongCodeAI/vn-dashcam-vision): nhận diện 52 loại biển báo**
-2 tầng: YOLO11n 1 lớp tìm biển + CNN tự thiết kế (SignNet, 1.19M tham số) phân loại crop; tracker + bỏ phiếu nhiều
-frame; suy luận tự viết bằng numpy + onnxruntime. mAP@0.5 **0.962** so với 0.801 của YOLO 52 lớp (lớp hiếm 0.950 so với
-0.769). Trên CPU laptop cả 2 tầng int8 ~80 ms/frame; int8 nhỏ hơn ~3 lần, nhanh hơn fp32 ~17% trên laptop nhưng
-không nhanh hơn trên CPU Colab. Sampler căn bậc 2 cho macro-F1 0.985. Chưa thử trên video xe máy.
+## 👋 Về mình
 
-**3. [vi-diacritics-transformer](https://github.com/DuongCodeAI/vi-diacritics-transformer): Transformer tự viết, thêm dấu tiếng Việt**
-Attention, multi-head, positional encoding tự viết bằng PyTorch thuần; đặt bài toán thành gán nhãn từng ký tự
-(30 lớp) nên không thể bịa chữ. Test Wikipedia word acc **0.948** (baseline bigram 0.854, ít lỗi hơn ~2.8 lần),
-int8 7.2 MB chạy trong trình duyệt ([demo](https://duongcodeai.github.io/vi-diacritics-transformer/)). So với seq2seq
-(nhiều tham số gấp đôi): seq2seq thua (0.919), đổi chữ ở 3.2% câu và chậm ~12 lần. Điểm yếu đã đo: tin nhắn chat chỉ 0.731.
+- Mình là **Tiến Dương**, sinh viên năm 4.
+- Đã làm các dự án thực tế về **phần mềm + AI**, trong đó có 2 app làm cho doanh nghiệp đã đăng lên **Google Play**:
+  - 🛒 **ZikinMarket**
+  - 🚗 **ZikinDriver**
 
-**4. [vi-function-calling-slm](https://github.com/DuongCodeAI/vi-function-calling-slm): fine-tune LLM nhỏ gọi tool trong xe**
-Qwen3-1.7B, QLoRA SFT + DPO, 17 tool, GGUF Q4_K_M chạy llama.cpp trên CPU. Dữ liệu tổng hợp 1.390 câu, nhãn sinh
-bằng code (không để LLM gán nhãn). Model gốc chưa fine-tune gọi tool khá được nhưng không bao giờ
-hỏi lại hay từ chối lệnh không an toàn. Trên 45 câu viết tay: SFT nâng args exact 0.52 → 0.91 nhưng vẫn không biết hỏi lại/từ chối;
-DPO dạy được hỏi lại khi thiếu thông tin (0/5 → 3/5 câu) và tự từ chối (0/3 → 1/3 câu; mẫu còn rất nhỏ), guard luật
-an toàn chặn nốt phần còn lại.
-Bản GGUF Q4 trên laptop (CPU 4 luồng): args exact 0.85, hỏi lại 2/5, p50 2.5 s; nhưng **không tự từ chối được**
-câu nào (0/3, bản fp16 được 1/3), nên guard luật cứng là lớp bảo vệ thật, không phải phụ.
+  Cả hai app có tích hợp AI để gợi ý, đề xuất, cùng nhiều chức năng khác.
+- Ngoài ra còn nhiều dự án sinh viên khác, gần nhất là bộ 5 dự án AI bên dưới.
+- Mong muốn được học hỏi và nỗ lực hơn nữa trong hành trình sắp tới.
 
-**5. [viet-copilot](https://github.com/DuongCodeAI/viet-copilot): ghép thành trợ lý lái xe**
-Event bus bất đồng bộ (buồn ngủ > biển báo > lệnh giọng nói), STT PhoWhisper, TTS Piper, buồn ngủ bằng EAR/PERCLOS.
-Cảnh báo biển báo không qua LLM: soát 52 mã biển × 2 loại xe, sửa từ 15/104 lên **88/104** cặp có cảnh báo đúng
-mức phạt. Fine-tune STT với tiếng ồn ra kết quả **kém hơn** bản gốc (WER sạch 2.14% → 3.13%) nên giữ bản gốc.
-STT small trên laptop: WER 2.8% (sạch) / 6.0% (ồn 10 dB) nhưng ~3 s/câu, nên lệnh giọng nói end-to-end mất khoảng
-5,6–6 s (STT 3,4 s + LLM fine-tune 2,1 s), **chưa đạt** mục tiêu 1.5 s.
+## 🛠️ Công nghệ
 
-Cách làm chung: đo trước khi tối ưu, giữ cả kết quả âm (STT fine-tune kém hơn, seq2seq thua tagger, embedding thua
-BM25), và soát lại số trên dữ liệu thật: so 3 size STT trên giọng tổng hợp suýt chọn sai model, đo lại trên giọng
-người mới thấy chênh 4 lần.
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
+<img src="https://img.shields.io/badge/ONNX%20Runtime-005CED?style=for-the-badge&logo=onnx&logoColor=white"/>
+<img src="https://img.shields.io/badge/llama.cpp-000000?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/YOLO-00B4D8?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
+<img src="https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+</p>
+
+## 🚀 Dự án nổi bật: Trợ lý lái xe tiếng Việt chạy offline
+
+5 repo: 4 thành phần + 1 hệ thống ghép lại, chạy trên laptop không GPU. Mỗi repo có README ghi số đã chạy thật, kể cả chỗ chưa đạt.
+
+| | Dự án | Làm gì | Điểm nhấn |
+|---|---|---|---|
+| ⚖️ | [**vn-traffic-law-rag**](https://github.com/DuongCodeAI/vn-traffic-law-rag) | RAG hỏi đáp luật giao thông, trích dẫn tới Điểm/Khoản/Điều | recall@5 **0.86** (BM25 0.74) |
+| 🚦 | [**vn-dashcam-vision**](https://github.com/DuongCodeAI/vn-dashcam-vision) | Nhận diện 52 loại biển báo: YOLO11 + CNN tự thiết kế | mAP@0.5 **0.962**, ~80 ms/frame CPU |
+| ✍️ | [**vi-diacritics-transformer**](https://github.com/DuongCodeAI/vi-diacritics-transformer) | Transformer tự viết từ đầu, thêm dấu tiếng Việt, chạy trên trình duyệt | word acc **0.948**, [demo](https://duongcodeai.github.io/vi-diacritics-transformer/) |
+| 🧠 | [**vi-function-calling-slm**](https://github.com/DuongCodeAI/vi-function-calling-slm) | Fine-tune Qwen3-1.7B (QLoRA SFT + DPO) gọi 17 tool trong xe | args exact 0.52 → **0.91** |
+| 🚗 | [**viet-copilot**](https://github.com/DuongCodeAI/viet-copilot) | Ghép tất cả: giọng nói, biển báo, buồn ngủ, tra luật | sửa cảnh báo biển báo 15 → **88/104** |
+
+## 📊 GitHub
+
+<div align="center">
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=DuongCodeAI&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DuongCodeAI&layout=compact&theme=tokyonight&hide_border=true"/>
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=110&section=footer" width="100%"/>

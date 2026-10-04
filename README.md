@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=190&section=header&text=Tien%20Duong&fontSize=46&fontColor=FFFFFF&desc=Software%20%26%20AI%20-%20Final-year%20student&descSize=18&descAlignY=68" width="100%"/>
+<h1>Tiến Dương</h1>
+<p><b>Software &amp; AI · Sinh viên năm 4</b></p>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=36BCF7&center=true&vCenter=true&width=640&lines=RAG+%C2%B7+Computer+Vision+%C2%B7+LLM+fine-tuning;AI+ch%E1%BA%A1y+offline+tr%C3%AAn+laptop+kh%C3%B4ng+GPU;2+app+doanh+nghi%E1%BB%87p+tr%C3%AAn+Google+Play" alt="typing"/>
 

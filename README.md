@@ -23,6 +23,8 @@
 
 ## 🛠️ Công nghệ
 
+**AI**
+
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
@@ -33,6 +35,15 @@
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
 <img src="https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white"/>
 <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"/>
+</p>
+
+**Phần mềm**
+
+<p>
+<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/React%20Native-0A0A0A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
 
@@ -47,12 +58,5 @@
 | ✍️ | [**vi-diacritics-transformer**](https://github.com/DuongCodeAI/vi-diacritics-transformer) | Transformer tự viết từ đầu, thêm dấu tiếng Việt, chạy trên trình duyệt | word acc **0.948**, [demo](https://duongcodeai.github.io/vi-diacritics-transformer/) |
 | 🧠 | [**vi-function-calling-slm**](https://github.com/DuongCodeAI/vi-function-calling-slm) | Fine-tune Qwen3-1.7B (QLoRA SFT + DPO) gọi 17 tool trong xe | args exact 0.52 → **0.91** |
 | 🚗 | [**viet-copilot**](https://github.com/DuongCodeAI/viet-copilot) | Ghép tất cả: giọng nói, biển báo, buồn ngủ, tra luật | sửa cảnh báo biển báo 15 → **88/104** |
-
-## 📊 GitHub
-
-<div align="center">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=DuongCodeAI&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DuongCodeAI&layout=compact&theme=tokyonight&hide_border=true"/>
-</div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=110&section=footer" width="100%"/>

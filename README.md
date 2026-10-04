@@ -16,8 +16,8 @@ làm recall@5 tụt (0.83 → 0.72), nên cả hai không bật mặc định.
 **2. [vn-dashcam-vision](https://github.com/DuongCodeAI/vn-dashcam-vision): nhận diện 52 loại biển báo**
 2 tầng: YOLO11n 1 lớp tìm biển + CNN tự thiết kế (SignNet, 1.19M tham số) phân loại crop; tracker + bỏ phiếu nhiều
 frame; suy luận tự viết bằng numpy + onnxruntime. mAP@0.5 **0.962** so với 0.801 của YOLO 52 lớp (lớp hiếm 0.950 so với
-0.769), ~120 ms/ảnh trên 1 nhân CPU Colab. Sampler căn bậc 2 cho macro-F1 0.985. Int8 nhỏ hơn ~3 lần nhưng chưa nhanh hơn
-trên CPU Colab. Chưa thử trên video xe máy.
+0.769). Trên CPU laptop cả 2 tầng int8 ~80 ms/frame; int8 nhỏ hơn ~3 lần, nhanh hơn fp32 ~17% trên laptop nhưng
+không nhanh hơn trên CPU Colab. Sampler căn bậc 2 cho macro-F1 0.985. Chưa thử trên video xe máy.
 
 **3. [vi-diacritics-transformer](https://github.com/DuongCodeAI/vi-diacritics-transformer): Transformer tự viết, thêm dấu tiếng Việt**
 Attention, multi-head, positional encoding tự viết bằng PyTorch thuần; đặt bài toán thành gán nhãn từng ký tự

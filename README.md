@@ -29,7 +29,8 @@ int8 7.2 MB chạy trong trình duyệt ([demo](https://duongcodeai.github.io/vi
 Qwen3-1.7B, QLoRA SFT + DPO, 17 tool, GGUF Q4_K_M chạy llama.cpp trên CPU. Dữ liệu tổng hợp 1.390 câu, nhãn sinh
 bằng code (không để LLM gán nhãn). Model gốc chưa fine-tune gọi tool khá được nhưng không bao giờ
 hỏi lại hay từ chối lệnh không an toàn. Trên 45 câu viết tay: SFT nâng args exact 0.52 → 0.91 nhưng vẫn không biết hỏi lại/từ chối;
-DPO dạy được hỏi lại khi thiếu thông tin (0 → 0.60) và tự từ chối (0 → 0.33), guard luật an toàn chặn nốt phần còn lại.
+DPO dạy được hỏi lại khi thiếu thông tin (0/5 → 3/5 câu) và tự từ chối (0/3 → 1/3 câu; mẫu còn rất nhỏ), guard luật
+an toàn chặn nốt phần còn lại.
 Latency GGUF bản fine-tune trên laptop: chưa đo.
 
 **5. [viet-copilot](https://github.com/DuongCodeAI/viet-copilot): ghép thành trợ lý lái xe**

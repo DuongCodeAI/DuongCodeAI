@@ -38,7 +38,7 @@ Event bus bất đồng bộ (buồn ngủ > biển báo > lệnh giọng nói),
 Cảnh báo biển báo không qua LLM: soát 52 mã biển × 2 loại xe, sửa từ 15/104 lên **88/104** cặp có cảnh báo đúng
 mức phạt. Fine-tune STT với tiếng ồn ra kết quả **kém hơn** bản gốc (WER sạch 2.14% → 3.13%) nên giữ bản gốc.
 STT small trên laptop: WER 2.8% (sạch) / 6.0% (ồn 10 dB) nhưng ~3 s/câu, nên lệnh giọng nói end-to-end mất khoảng
-4–6 s, **chưa đạt** mục tiêu 1.5 s.
+5,6–6 s (STT 3,4 s + LLM fine-tune 2,1 s), **chưa đạt** mục tiêu 1.5 s.
 
 Cách làm chung: đo trước khi tối ưu, giữ cả kết quả âm (STT fine-tune kém hơn, seq2seq thua tagger, embedding thua
 BM25), và soát lại số trên dữ liệu thật: so 3 size STT trên giọng tổng hợp suýt chọn sai model, đo lại trên giọng

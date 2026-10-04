@@ -31,7 +31,8 @@ bằng code (không để LLM gán nhãn). Model gốc chưa fine-tune gọi too
 hỏi lại hay từ chối lệnh không an toàn. Trên 45 câu viết tay: SFT nâng args exact 0.52 → 0.91 nhưng vẫn không biết hỏi lại/từ chối;
 DPO dạy được hỏi lại khi thiếu thông tin (0/5 → 3/5 câu) và tự từ chối (0/3 → 1/3 câu; mẫu còn rất nhỏ), guard luật
 an toàn chặn nốt phần còn lại.
-Latency GGUF bản fine-tune trên laptop: chưa đo.
+Bản GGUF Q4 trên laptop (CPU 4 luồng): args exact 0.85, hỏi lại 2/5, p50 2.5 s; nhưng **không tự từ chối được**
+câu nào (0/3, bản fp16 được 1/3), nên guard luật cứng là lớp bảo vệ thật, không phải phụ.
 
 **5. [viet-copilot](https://github.com/DuongCodeAI/viet-copilot): ghép thành trợ lý lái xe**
 Event bus bất đồng bộ (buồn ngủ > biển báo > lệnh giọng nói), STT PhoWhisper, TTS Piper, buồn ngủ bằng EAR/PERCLOS.

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=190&section=header&text=Ti%E1%BA%BFn%20D%C6%B0%C6%A1ng&fontSize=46&fontColor=FFFFFF&animation=fadeIn&desc=Software%20%26%20AI%20%C2%B7%20Sinh%20vi%C3%AAn%20n%C4%83m%204&descSize=18&descAlignY=68" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=190&section=header&text=Ti%E1%BA%BFn%20D%C6%B0%C6%A1ng&fontSize=46&fontColor=FFFFFF&desc=Software%20%26%20AI%20%C2%B7%20Sinh%20vi%C3%AAn%20n%C4%83m%204&descSize=18&descAlignY=68" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=36BCF7&center=true&vCenter=true&width=640&lines=RAG+%C2%B7+Computer+Vision+%C2%B7+LLM+fine-tuning;AI+ch%E1%BA%A1y+offline+tr%C3%AAn+laptop+kh%C3%B4ng+GPU;2+app+doanh+nghi%E1%BB%87p+tr%C3%AAn+Google+Play" alt="typing"/>
 

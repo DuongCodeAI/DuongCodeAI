@@ -59,4 +59,12 @@
 | 🧠 | [**vi-function-calling-slm**](https://github.com/DuongCodeAI/vi-function-calling-slm) | Fine-tune Qwen3-1.7B (QLoRA SFT + DPO) gọi 17 tool trong xe | args exact 0.52 → **0.91** |
 | 🚗 | [**viet-copilot**](https://github.com/DuongCodeAI/viet-copilot) | Ghép tất cả: giọng nói, biển báo, buồn ngủ, tra luật | sửa cảnh báo biển báo 15 → **88/104** |
 
+**Cách làm chung:** đo trước khi tối ưu, giữ cả kết quả âm (fine-tune STT kém hơn bản gốc, seq2seq thua tagger,
+embedding thua BM25 trên văn bản luật) và ghi rõ chỗ chưa đạt (lệnh giọng nói end-to-end ~6 s trên CPU, mục tiêu 1.5 s).
+Mỗi repo có CI (ruff + pytest), notebook Colab để train lại, model trên Hugging Face.
+
+> *English: five repos that build an offline Vietnamese driving assistant on a CPU-only laptop: hybrid RAG over traffic law,
+> two-stage traffic-sign recognition, a from-scratch Transformer for diacritics restoration, a QLoRA SFT + DPO fine-tuned
+> Qwen3-1.7B for tool calling, and the system that ties them together. Every number in the READMEs comes from an actual run.*
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=110&section=footer" width="100%"/>

@@ -5,6 +5,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1200&color=36BCF7&center=true&vCenter=true&width=640&lines=RAG+%C2%B7+Computer+Vision+%C2%B7+LLM+fine-tuning;AI+ch%E1%BA%A1y+offline+tr%C3%AAn+laptop+kh%C3%B4ng+GPU;2+app+doanh+nghi%E1%BB%87p+tr%C3%AAn+Google+Play" alt="typing"/>
 
+<a href="mailto:khongtienduongcv@gmail.com"><img src="https://img.shields.io/badge/Email-khongtienduongcv%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://huggingface.co/hgdkakhs"><img src="https://img.shields.io/badge/Hugging%20Face-hgdkakhs-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white"/></a>
 <a href="https://duongcodeai.github.io/vi-diacritics-transformer/"><img src="https://img.shields.io/badge/Live%20demo-Th%C3%AAm%20d%E1%BA%A5u%20ti%E1%BA%BFng%20Vi%E1%BB%87t-2ECC71?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
 
@@ -20,6 +21,7 @@
   Cả hai app có tích hợp AI để gợi ý, đề xuất, cùng nhiều chức năng khác.
 - Ngoài ra còn nhiều dự án sinh viên khác, gần nhất là bộ 5 dự án AI bên dưới.
 - Mong muốn được học hỏi và nỗ lực hơn nữa trong hành trình sắp tới.
+- 📫 Liên hệ: **[khongtienduongcv@gmail.com](mailto:khongtienduongcv@gmail.com)**
 
 ## 🛠️ Công nghệ
 

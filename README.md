@@ -65,6 +65,15 @@
 embedding thua BM25 trên văn bản luật) và ghi rõ chỗ chưa đạt (lệnh giọng nói end-to-end ~6 s trên CPU, mục tiêu 1.5 s).
 Mỗi repo có CI (ruff + pytest), notebook Colab để train lại, model trên Hugging Face.
 
+## 🎲 Dự án đào sâu: AlphaZero tự học Ô ăn quan
+
+[**oanquan-zero**](https://github.com/DuongCodeAI/oanquan-zero) · [**chơi thử trên web**](https://oanquan-zero.vercel.app)
+
+AI tự học Ô ăn quan từ số 0 (chỉ biết luật, tự đánh 84.000 ván, 37 phút trên laptop không GPU). Tự viết luật, MCTS,
+vòng train và một solver giải chính xác bàn thu nhỏ (82.885 thế cờ) để **chấm AI bằng đáp án thật**: trên bộ đề
+cố định, chọn đúng nước tối ưu 37% → **85%** (có MCTS 77% → **92%**). Bàn chuẩn: thắng minimax 4 nước 0,77 theo cặp
+ván, vẫn thua minimax 8 nước; README ghi cả hai lần mình kết luận sai và cách phát hiện.
+
 > *English: five repos that build an offline Vietnamese driving assistant on a CPU-only laptop: hybrid RAG over traffic law,
 > two-stage traffic-sign recognition, a from-scratch Transformer for diacritics restoration, a QLoRA SFT + DPO fine-tuned
 > Qwen3-1.7B for tool calling, and the system that ties them together. Every number in the READMEs comes from an actual run.*
